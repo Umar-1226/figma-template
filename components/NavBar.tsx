@@ -18,7 +18,7 @@ export default function NavBar() {
   const [mobileOpen, setMobileOpen] = useState<Boolean>(false);
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 770) {
+      if (window.innerWidth >= 768) {
         setMobileOpen(false);
       }
     };
@@ -27,8 +27,8 @@ export default function NavBar() {
   }, []);
 
   return (
-    <div className="stick top-0 z-50 ">
-      <div className="container flex items-center  py-3">
+    <div className="stick top-0 z-50 shadow-black/50 shadow-sm w-screen ">
+      <div className=" flex items-center ">
         <Link
           href={"/"}
           className=" p-3 mr-30 text-blue-700 text-2xl font-bold hover:bg-blue-500"
@@ -54,10 +54,19 @@ export default function NavBar() {
           </Link>
         </div>
         <div className="flex items-center space-x-4">
+          <div className="hidden md:flex fixed top-2 right-5 items-center mt-4 ">
+            <Link href={"/"} className="pr-8">
+              Log in
+            </Link>
+            <Button className="rounded-lg bg-blue-600">
+              <Link href={"/"}>Get Started </Link>
+            </Button>
+          </div>
+
           {/* //on click change to opposite boolean */}
           <Button
             variant="ghost"
-            className="md:hidden"
+            className="md:hidden fixed top-2 right-3"
             onClick={() => setMobileOpen((prev) => !prev)}
           >
             {mobileOpen ? (
@@ -66,38 +75,32 @@ export default function NavBar() {
               <Bars3Icon className="h-6 w-6" />
             )}
           </Button>
-          <div className="flex absolute top-0 right-0 p-5 pt-7">
-            <Link href={"/"} className="pr-6 pt-1">
-              Log in
-            </Link>
-            <Link href={"/"}>
-              <Button className="rounded-lg bg-blue-600">Get Started</Button>
-            </Link>
-          </div>
         </div>
       </div>
       {mobileOpen && (
-        <nav className="md:hidden bg-black text-right shadow-md">
+        <nav className="md:hidden  text-left shadow-md">
           <ul className="flex flex-col p-4 space-y-2">
-            <li>
-              <Link className="block hover:text-blue-600" href={"/"}>
-                Home
+            <li className="block">
+              <Link href={"/"} className="text-center pt-3 hover:bg-blue-500">
+                Products
+                <ChevronDownIcon className="inline ml-2 h-4 w-4" />
               </Link>
             </li>
-            <li>
-              <Link
-                className="block hover:text-blue-600"
-                href={"/Products_page"}
-              >
-                Products page
+            <li className="block">
+              <Link href={"/"} className="text-center pt-3 hover:bg-blue-500">
+                Bussiness Solutions
+                <ChevronDownIcon className="inline ml-2 h-4 w-4" />
               </Link>
             </li>
-            <li>
-              <Link
-                className="block hover:text-blue-600"
-                href={"/Checkout_page"}
-              >
-                Checkout page
+            <li className="block">
+              <Link href={"/"} className="text-center pt-3 hover:bg-blue-500">
+                Help Center
+                <ChevronDownIcon className="inline ml-2 h-4 w-4" />
+              </Link>
+            </li>
+            <li className="block">
+              <Link href={"/"} className="text-center pt-3 hover:bg-blue-500">
+                Pricing
               </Link>
             </li>
           </ul>
