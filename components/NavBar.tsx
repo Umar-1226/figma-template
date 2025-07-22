@@ -27,11 +27,11 @@ export default function NavBar() {
   }, []);
 
   return (
-    <div className="stick top-0 z-50 shadow-black/50 shadow-sm w-screen ">
-      <div className=" flex items-center ">
+    <div className="stick top-0 z-50  shadow-md w-screen pb-3 ">
+      <div className=" flex  w-screen ">
         <Link
           href={"/"}
-          className=" p-3 mr-30 text-blue-700 text-2xl font-bold hover:bg-blue-500"
+          className=" p-3  text-blue-700 text-2xl font-bold hover:bg-blue-500"
         >
           My Ecommerse
         </Link>
@@ -54,7 +54,7 @@ export default function NavBar() {
           </Link>
         </div>
         <div className="flex items-center space-x-4">
-          <div className="hidden md:flex fixed top-2 right-5 items-center mt-4 ">
+          <div className="hidden md:flex fixed top-1 right-5 items-center mt-4 ">
             <Link href={"/"} className="pr-8">
               Log in
             </Link>
@@ -66,7 +66,7 @@ export default function NavBar() {
           {/* //on click change to opposite boolean */}
           <Button
             variant="ghost"
-            className="md:hidden fixed top-2 right-3"
+            className="md:hidden sticky top-2 right-2"
             onClick={() => setMobileOpen((prev) => !prev)}
           >
             {mobileOpen ? (
