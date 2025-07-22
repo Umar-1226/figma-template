@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import {
+  ChevronDownIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
   PlayIcon,
@@ -175,12 +176,12 @@ export default function Home() {
           />
           <div className="flex flex-col content-center justify-center p-8">
             <h1 className="text-gray-700 text-lg mb-4">Success Stories</h1>
-            <p>
-              <span className="text-yellow-600">“</span> Id urna, nisl, ut quam.
-              Diam suspendisse fringilla quam arcu mattis est velit in. Nibh in
-              purus sit convallis phasellus ut. At vel erat ultricies commodo.
-              Neque suspendisse a habitasse commodo.
-              <span className="text-yellow-600">”</span>
+            <p className="mb-3">
+              <span className="text-yellow-500 text-2xl">“</span> Id urna, nisl,
+              ut quam. Diam suspendisse fringilla quam arcu mattis est velit in.
+              Nibh in purus sit convallis phasellus ut. At vel erat ultricies
+              commodo. Neque suspendisse a habitasse commodo.
+              <span className=" inline text-red-600 text-2xl">”</span>
             </p>
             <h1 className="text-sm text-gray-700">Marie Poirot,</h1>
             <h1>Bigapp</h1>
@@ -189,6 +190,76 @@ export default function Home() {
         <div>
           <ChevronRightIcon className="h-10 w-10" />
         </div>
+      </section>
+      <section>
+        <h1 className="text-4xl font-bold text-center m-8">
+          Answers to your questions
+        </h1>
+        <div className="flex flex-col p-10  ml-15 mr-15">
+          <div className="flex items-center border-t-3 border-b-3 p-5 border-gray-100 text-blue-500">
+            <p>
+              Enim sodales consequat adipiscing facilisis massa venenatis, non
+              lorem lobortis?
+            </p>
+            <ChevronDownIcon className="h-5 w-5 ml-auto" />
+          </div>
+          <div className="flex items-center border-b-3 p-5 border-gray-100 text-blue-500">
+            <p>
+              Enim sodales consequat adipiscing facilisis massa venenatis, non
+              lorem lobortis?
+            </p>
+            <ChevronDownIcon className="h-5 w-5 ml-auto" />
+          </div>
+          <div className="flex items-center border-b-3 p-5 border-gray-100 text-blue-500">
+            <p>
+              Enim sodales consequat adipiscing facilisis massa venenatis, non
+              lorem lobortis?
+            </p>
+            <ChevronDownIcon className="h-5 w-5 ml-auto" />
+          </div>
+          <div className="flex items-center border-b-3  p-5 border-gray-100 text-blue-500">
+            <p>
+              Enim sodales consequat adipiscing facilisis massa venenatis, non
+              lorem lobortis?
+            </p>
+            <ChevronDownIcon className="h-5 w-5 ml-auto" />
+          </div>
+          <div className="flex items-center   p-5 border-gray-100 text-blue-500">
+            <p>
+              Enim sodales consequat adipiscing facilisis massa venenatis, non
+              lorem lobortis?
+            </p>
+            <ChevronDownIcon className="h-5 w-5 ml-auto" />
+          </div>
+        </div>
+      </section>
+      <section className="grid grid-cols-2 bg-gray-100 p-8 pt-15 gap-5">
+        <div className=" text-wrap p-20">
+          <h1 className="font-bold text-5xl leading-12 pb-5 ">
+            Start now and get the best services
+          </h1>
+          <p>
+            Ac urna elementum purus vulputate tincidunt. Quam maecenas feugiat
+            congue orci, eget tellus pellentesque aliquet. Felis fringilla morbi
+            dui ac consequat risus pharetra odio pulvinar. Id pellentesque in
+            tortor nec nulla cras sapien. Adipiscing nisi tellus quisque aliquet
+            sit risus elementum scelerisque.
+          </p>
+          <div className="flex items-center pt-6">
+            <Link
+              href={"/"}
+              className="rounded-md p-2 pl-4 pr-4  text-white  text-xl bg-blue-600"
+            >
+              Get Started
+            </Link>
+          </div>
+        </div>
+        <Image
+          src={"/images/IPhone4.png"}
+          alt="An Iphone"
+          width={"500"}
+          height={"500"}
+        />
       </section>
     </main>
   );

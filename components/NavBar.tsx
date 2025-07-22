@@ -28,7 +28,7 @@ export default function NavBar() {
 
   return (
     <div className="stick top-0 z-50  shadow-md w-screen pb-3 ">
-      <div className=" flex  w-screen ">
+      <div className=" flex  items-center ">
         <Link
           href={"/"}
           className=" p-3  text-blue-700 text-2xl font-bold hover:bg-blue-500"
@@ -53,8 +53,8 @@ export default function NavBar() {
             Pricing
           </Link>
         </div>
-        <div className="flex items-center space-x-4">
-          <div className="hidden md:flex fixed top-1 right-5 items-center mt-4 ">
+        <div className="flex items-center ml-auto space-x-4">
+          <div className="hidden md:flex  items-center mt-4 ">
             <Link href={"/"} className="pr-8">
               Log in
             </Link>
@@ -66,7 +66,7 @@ export default function NavBar() {
           {/* //on click change to opposite boolean */}
           <Button
             variant="ghost"
-            className="md:hidden sticky top-2 right-2"
+            className="md:hidden ml-auto pr-4"
             onClick={() => setMobileOpen((prev) => !prev)}
           >
             {mobileOpen ? (
