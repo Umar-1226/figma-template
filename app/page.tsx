@@ -270,7 +270,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="flex flex-col text-center  gap-5md:grid grid-cols-6 p-15">
+      <section className="flex flex-col text-center gap-5 md:grid grid-cols-6 p-15">
         <div className="flex flex-col">
           <h1 className="text-lg font-bold pb-2">Categories</h1>
           <p className="text-gray-700">User Interface</p>
