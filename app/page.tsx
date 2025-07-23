@@ -5,24 +5,25 @@ import {
   ChevronRightIcon,
   PlayIcon,
 } from "@heroicons/react/24/outline";
+import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="pb-50">
-      <section className="grid grid-cols-2 pt-15 gap-5">
-        <div className="w-full text-wrap h-full p-20">
-          <h1 className="font-bold text-6xl leading-18 pb-5 ">
+    <main className="p-5">
+      <section className="flex flex-col  md:grid grid-cols-2 pt-15 gap-5">
+        <div className=" text-center p-10 md:text-wrap md:p-20">
+          <h1 className="text-6xl pb-5 md:text-left font-bold md:leading-18 ">
             Building Apps Just Got Easier
           </h1>
-          <p>
+          <p className="md:text-left">
             Aliquam vel platea curabitur sit vestibulum egestas sit id lorem.
             Aliquet neque, dui sed eget scelerisque. Non at at venenatis tortor
             amet feugiat ullamcorper in. Odio vulputate cras vel lacinia turpis
             volutpat adipiscing. Sollicitudin at velit, blandit tempus nunc in.
           </p>
-          <div className="flex items-center pt-6">
+          <div className="flex justify-center md:justify-start md:items-center pt-6">
             <Link
               href={"/"}
               className="rounded-md p-2 pl-4 pr-4 mr-10 text-white  text-xl bg-blue-600"
@@ -35,14 +36,16 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <Image
-          src={"/images/IPhone.png"}
-          alt="An Iphone"
-          width={"500"}
-          height={"500"}
-        />
+        <div className="flex place-content-center">
+          <Image
+            src={"/images/IPhone.png"}
+            alt="An Iphone"
+            width={"500"}
+            height={"500"}
+          />
+        </div>
       </section>
-      <section className="flex p-10 bg-gray-50">
+      <section className="flex flex-col p-10 md:flex-row bg-gray-50">
         <div className="flex flex-col items-center  p-4 text-wrap text-center">
           <Image
             src={"/images/RedCircle.png"}
@@ -94,14 +97,16 @@ export default function Home() {
             Sollicitudin at velit, blandit tempus nunc in.
           </p>
         </div>
-        <div className="grid grid-cols-2 p-15 mt-8">
-          <Image
-            src={"/images/IPhone3.png"}
-            alt="An IPhone"
-            width={"500"}
-            height={"700"}
-          ></Image>
-          <div className="flex-col content-center ">
+        <div className="flex flex-col md:items-center md:grid grid-cols-2 md:p-15 mt-8">
+          <div className="flex place-content-center">
+            <Image
+              src={"/images/IPhone3.png"}
+              alt="An IPhone"
+              width={"500"}
+              height={"700"}
+            />
+          </div>
+          <div className="flex flex-col content-center mt-5 ">
             <div className="pl-5 border-l-3 border-blue-600 mb-5 text-wrap">
               <h1 className="text-lg font-bold">Sem augue tempus</h1>
               <p>
@@ -130,13 +135,15 @@ export default function Home() {
             pellentesque facilisis nunc, varius.
           </p>
         </div>
-        <div className="grid grid-cols-2 p-15 mt-8">
-          <Image
-            src={"/images/IPhone2.png"}
-            alt="An IPhone"
-            width={"500"}
-            height={"700"}
-          ></Image>
+        <div className="flex flex-col md:items-center md:grid grid-cols-2 md:p-15 mt-8">
+          <div className="flex place-content-center">
+            <Image
+              src={"/images/IPhone2.png"}
+              alt="An IPhone"
+              width={"500"}
+              height={"700"}
+            />
+          </div>
           <div className="flex-col content-center ">
             <div className="pl-5 border-l-3 border-blue-600 mb-5 text-wrap">
               <h1 className="text-lg font-bold">
@@ -163,11 +170,11 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <section className="flex items-center  mt-5 bg-gray-100 ">
+      <section className="flex items-center p-5 mt-5 bg-gray-100 ">
         <div>
           <ChevronLeftIcon className="h-10 w-10" />
         </div>
-        <div className="grid grid-cols-2 p-20">
+        <div className="flex flex-col md:grid grid-cols-2 p-20">
           <Image
             src={"/images/FingerGun.png"}
             alt="optamistic women"
@@ -188,7 +195,7 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <ChevronRightIcon className="h-10 w-10" />
+          <ChevronRightIcon className="h-10 w-10 " />
         </div>
       </section>
       <section>
@@ -233,19 +240,19 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="grid grid-cols-2 bg-gray-100 p-8 pt-15 gap-5">
-        <div className=" text-wrap p-20">
-          <h1 className="font-bold text-5xl leading-12 pb-5 ">
+      <section className="flex flex-col md:grid grid-cols-2 bg-gray-100 p-8 pt-15 gap-5">
+        <div className=" text-center p-10 md:text-wrap md:p-20">
+          <h1 className="text-6xl pb-5 md:text-left font-bold md:leading-18 ">
             Start now and get the best services
           </h1>
-          <p>
+          <p className="md:text-left">
             Ac urna elementum purus vulputate tincidunt. Quam maecenas feugiat
             congue orci, eget tellus pellentesque aliquet. Felis fringilla morbi
             dui ac consequat risus pharetra odio pulvinar. Id pellentesque in
             tortor nec nulla cras sapien. Adipiscing nisi tellus quisque aliquet
             sit risus elementum scelerisque.
           </p>
-          <div className="flex items-center pt-6">
+          <div className="flex justify-center md:justify-start items-center pt-6">
             <Link
               href={"/"}
               className="rounded-md p-2 pl-4 pr-4  text-white  text-xl bg-blue-600"
@@ -254,12 +261,81 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <Image
-          src={"/images/IPhone4.png"}
-          alt="An Iphone"
-          width={"500"}
-          height={"500"}
-        />
+        <div className="flex place-content-center">
+          <Image
+            src={"/images/IPhone4.png"}
+            alt="An Iphone"
+            width={"500"}
+            height={"500"}
+          />
+        </div>
+      </section>
+      <section className="flex flex-col text-center  gap-5md:grid grid-cols-6 p-15">
+        <div className="flex flex-col">
+          <h1 className="text-lg font-bold pb-2">Categories</h1>
+          <p className="text-gray-700">User Interface</p>
+          <p className="text-gray-700">User Experience</p>
+          <p className="text-gray-700">Digital Media</p>
+          <p className="text-gray-700">Lifestyle</p>
+          <p className="text-gray-700">Programming</p>
+          <p className="text-gray-700">Animation</p>
+        </div>
+        <div className="flex flex-col">
+          <h1 className="text-lg font-bold pb-2">Product</h1>
+          <p className="text-gray-700">Pricing</p>
+          <p className="text-gray-700">Overview</p>
+          <p className="text-gray-700">Browse</p>
+          <p className="text-gray-700">Accessibility</p>
+          <p className="text-gray-700">Five</p>
+          <p className="text-gray-700">Changelog</p>
+        </div>
+        <div className="flex flex-col">
+          <h1 className="text-lg font-bold pb-2">Solutions</h1>
+          <p className="text-gray-700">Brainstorminge</p>
+          <p className="text-gray-700">Ideation</p>
+          <p className="text-gray-700">Wireframing</p>
+          <p className="text-gray-700">Research</p>
+          <p className="text-gray-700">Design</p>
+          <p className="text-gray-700">Concept</p>
+        </div>
+        <div className="flex flex-col">
+          <h1 className="text-lg font-bold pb-2">Resources</h1>
+          <p className="text-gray-700">Help Center</p>
+          <p className="text-gray-700">Blog</p>
+          <p className="text-gray-700">Tutorials</p>
+          <p className="text-gray-700">FAQs</p>
+          <p className="text-gray-700">Community</p>
+          <p className="text-gray-700">Events</p>
+        </div>
+        <div className="flex flex-col">
+          <h1 className="text-lg font-bold pb-2">Support</h1>
+          <p className="text-gray-700">Contact Us</p>
+          <p className="text-gray-700">Developers</p>
+          <p className="text-gray-700">Documentation</p>
+          <p className="text-gray-700">Integrations</p>
+          <p className="text-gray-700">Reports</p>
+          <p className="text-gray-700">Webinar</p>
+        </div>
+        <div className="flex flex-col">
+          <h1 className="text-lg font-bold pb-2">Company</h1>
+          <p className="text-gray-700">About</p>
+          <p className="text-gray-700">Press </p>
+          <p className="text-gray-700">Events</p>
+          <p className="text-gray-700">Careers</p>
+          <p className="text-gray-700">Customers</p>
+          <p className="text-gray-700">Partners</p>
+        </div>
+      </section>
+      <section className="flex items-center p-10 md:p-10 justify-between">
+        <h1 className="text-2xl font-bold text-blue-600">Appy</h1>
+        <p className="text-gray-700">@ 2023 All rights reserved.</p>
+        <div className="flex gap-5">
+          <Instagram />
+          <Linkedin />
+          <Youtube />
+          <Facebook />
+          <Twitter />
+        </div>
       </section>
     </main>
   );
