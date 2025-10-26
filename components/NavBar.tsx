@@ -29,27 +29,24 @@ export default function NavBar() {
   return (
     <div className="stick top-0 z-50  shadow-md w-screen pb-3 ">
       <div className=" flex  items-center ">
-        <Link
-          href={"/"}
-          className=" p-3  text-blue-700 text-2xl font-bold hover:bg-blue-500"
-        >
+        <Link href={"/"} className=" p-3  text-blue-700 text-2xl font-bold ">
           My Ecommerse
         </Link>
 
         <div className="hidden md:flex space-x-5">
-          <Link href={"/"} className="text-center pt-3 hover:bg-blue-500">
+          <Link href={"/"} className="text-center pt-3 ">
             Products
             <ChevronDownIcon className="inline ml-2 h-4 w-4" />
           </Link>
-          <Link href={"/"} className="text-center pt-3 hover:bg-blue-500">
+          <Link href={"/"} className="text-center pt-3 ">
             Bussiness Solutions
             <ChevronDownIcon className="inline ml-2 h-4 w-4" />
           </Link>
-          <Link href={"/"} className="text-center pt-3 hover:bg-blue-500">
+          <Link href={"/"} className="text-center pt-3 ">
             Help Center
             <ChevronDownIcon className="inline ml-2 h-4 w-4" />
           </Link>
-          <Link href={"/"} className="text-center pt-3 hover:bg-blue-500">
+          <Link href={"/"} className="text-center pt-3">
             Pricing
           </Link>
         </div>
@@ -81,25 +78,25 @@ export default function NavBar() {
         <nav className="md:hidden  text-left">
           <ul className="flex flex-col p-4 space-y-2">
             <li className="block">
-              <Link href={"/"} className="text-center pt-3 hover:bg-blue-500">
+              <Link href={"/"} className="text-center pt-3 ">
                 Products
                 <ChevronDownIcon className="inline ml-2 h-4 w-4" />
               </Link>
             </li>
             <li className="block">
-              <Link href={"/"} className="text-center pt-3 hover:bg-blue-500">
+              <Link href={"/"} className="text-center pt-3">
                 Bussiness Solutions
                 <ChevronDownIcon className="inline ml-2 h-4 w-4" />
               </Link>
             </li>
             <li className="block">
-              <Link href={"/"} className="text-center pt-3 hover:bg-blue-500">
+              <Link href={"/"} className="text-center pt-3 ">
                 Help Center
                 <ChevronDownIcon className="inline ml-2 h-4 w-4" />
               </Link>
             </li>
             <li className="block">
-              <Link href={"/"} className="text-center pt-3 hover:bg-blue-500">
+              <Link href={"/"} className="text-center pt-3">
                 Pricing
               </Link>
             </li>
